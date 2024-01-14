@@ -13,7 +13,27 @@ First of all, I want to introduce the tools and framework I used, including
    - Self-hosting means exposing your service to the public to some extent, so having cloudflare filters incoming requests is a great idea. Though it is not perfect (nothing is perfect in this world haha), it can protect your device to a certain level.
 
 ## Process
-### Docker
+### 1. Doman Name
+In order to use domain name to find your website instead of your IP, you need to buy one from a domain registrar.
+- If the domain name is bought from cloudflare, then you are done with this part.
+- If not, you need to add cloudflare's nameserver to your domain regiestrar's nameserver. This is to tell your domain registrar to direct the incoming request to cloudflare so that cloudflare can filter out malicious connection and direct the request to your site. Usually, the registrar has a friendly GUI for you to set this up.
+- To check if your nameserver is set up successfully, type `nslookup yourDomainName`. You may see something similar to the following
+  ```
+   Server:		127.0.0.53
+   Address:	127.0.0.53#53
+   
+   Non-authoritative answer:
+   Name:	tsaoching.work
+   Address: 172.67.184.96   # This is the IP address of cloudflare's machine. Your IP is hidden!
+   Name:	tsaoching.work
+   Address: 104.21.19.8
+   Name:	tsaoching.work
+   Address: 2606:4700:3030::6815:1308
+   Name:	tsaoching.work
+   Address: 2606:4700:3031::ac43:b860
+
+  ```
+### 2. Docker
 1. Go to [docker official page](https://docs.docker.com/engine/install/) to install docker, and go to [docker official page](https://docs.docker.com/compose/install/) to install docker compose.
 2. Follow the instructions on the site to make sure you have installed docker successfully.
 3. Git clone this repo, cd to this directory, and execute `docker compose up` to see if it works.
@@ -23,3 +43,6 @@ cd ./SelfHostWebsite
 docker compose up
 ```
 4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other is mysql database for wordpress to interact with.
+
+### 3. WordPress
+(to be continued)
