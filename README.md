@@ -13,7 +13,7 @@ First of all, I want to introduce the tools and framework I used, including
    - Self-hosting means exposing your service to the public to some extent, so having cloudflare filters incoming requests is a great idea. Though it is not perfect (nothing is perfect in this world haha), it can protect your device to a certain level.
 
 ## Process
-###. Docker
+### Docker
      1. Go to [docker official page](https://docs.docker.com/engine/install/) to install docker, and go to [docker official page](https://docs.docker.com/compose/install/) to install docker compose.
      2. Follow the instructions on the site to make sure you have installed docker successfully.
      3. Git clone this repo, cd to this directory, and execute `docker compose up` to see if it works.
