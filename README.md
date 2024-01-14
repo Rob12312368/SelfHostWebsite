@@ -14,12 +14,12 @@ First of all, I want to introduce the tools and framework I used, including
 
 ## Process
 ### Docker
-     1. Go to [docker official page](https://docs.docker.com/engine/install/) to install docker, and go to [docker official page](https://docs.docker.com/compose/install/) to install docker compose.
-     2. Follow the instructions on the site to make sure you have installed docker successfully.
-     3. Git clone this repo, cd to this directory, and execute `docker compose up` to see if it works.
-     ```
-     git clone "https://github.com/Rob12312368/SelfHostWebsite.git"
-     cd ./SelfHostWebsite 
-     docker compose up
-     ```
-    4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other is mysql database for wordpress to interact with.
+1. Go to [docker official page](https://docs.docker.com/engine/install/) to install docker, and go to [docker official page](https://docs.docker.com/compose/install/) to install docker compose.
+2. Follow the instructions on the site to make sure you have installed docker successfully.
+3. Git clone this repo, cd to this directory, and execute `docker compose up` to see if it works.
+```
+git clone "https://github.com/Rob12312368/SelfHostWebsite.git"
+cd ./SelfHostWebsite 
+docker compose up
+```
+4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other is mysql database for wordpress to interact with.
