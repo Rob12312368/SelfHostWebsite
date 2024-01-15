@@ -65,6 +65,10 @@ docker compose up
    - The service is to tell cloudflare where your service is in a lan, including the private ip and port number.
      1. For **Type**, we choose HTTP because wordpress uses that protocol on default.
      2. URL is your private ip and port number in this format "ip:port". In this tutorial, since we open wordpress service on 8080, it is "ip:8080".
+     3. To find your private ip, you can type `ip address`, and look for a line starting with **inet ...**. The address right after is your private ip. Usually, your private ip may change from time to time, so you need to set up ip reservation on your router.
+
+### 5. DONE!!!
+Now you should be able to view your page through your domain name. If you have any questions, leave a comment under the blog post.
 
 
 
