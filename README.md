@@ -45,14 +45,14 @@ docker compose up
 4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other one is the mysql database for wordpress to interact with.
 
 ### 3. WordPress
-1. Access your website by typing *localhost:8080" on your browswer.
+1. Access your website by typing **localhost:8080** on your browswer.
 2. After you log into your wordpress account, go to settings.
 3. Because we want to enforce https for the site, you need to change the *WordPress Address* and *Site Address* from whatever it was to **https://yourDomainName**  
 ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/7c70650f-e86f-496e-83ec-7ad12c7e8c18)
 
 ### 4. Cloudflare
 1. Sign up a cloudflare account at [cloudflare tunnel page](https://www.cloudflare.com/products/tunnel/), and go to [select account page](https://one.dash.cloudflare.com/?to=/:account/access/tunnels) to select an account for creating the tunnel.
-2. You will see a dashboard, and there is a small button called *add tunnel*
+2. You will see a dashboard, and there is a small button called **add tunnel**
    ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/fa7450a2-797b-44ea-80f0-13865ca0559a)
 3. Then, name your tunnel.
    ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/0669239c-f22b-4697-8818-efe457de46d4)
@@ -66,6 +66,7 @@ docker compose up
      1. For **Type**, we choose HTTP because wordpress uses that protocol on default.
      2. URL is your private ip and port number in this format "ip:port". In this tutorial, since we open wordpress service on 8080, it is "ip:8080".
      3. To find your private ip, you can type `ip address`, and look for a line starting with **inet ...**. The address right after is your private ip. Usually, your private ip may change from time to time, so you need to set up ip reservation on your router.
+![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/2ef9b550-fb55-423d-aa11-122800a627aa)
 
 ### 5. DONE!!!
 Now you should be able to view your page through your domain name. If you have any questions, leave a comment under the blog post.
