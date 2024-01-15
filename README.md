@@ -47,6 +47,6 @@ docker compose up
 ### 3. WordPress
 1. Access your website by typing *localhost:8080" on your browswer.
 2. After you log into your wordpress account, go to settings.
-3. Because we want to enforce https for the site, you need to change the *WordPress Address* and *Site Address* from whatever it was to **https://yourDomainName**
+3. Because we want to enforce https for the site, you need to change the *WordPress Address* and *Site Address* from whatever it was to **https://yourDomainName**  
 ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/7c70650f-e86f-496e-83ec-7ad12c7e8c18)
 
