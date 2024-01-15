@@ -13,9 +13,9 @@ First of all, I want to introduce the tools and framework I used, including
    - Self-hosting means exposing your service to the public to some extent, so having cloudflare filters incoming requests is a great idea. Though it is not perfect (nothing is perfect in this world haha), it can protect your device to a certain level.
 
 ## Process
-### 1. Doman Name
-In order to use domain name to find your website instead of your IP, you need to buy one from a domain registrar.
-- If the domain name is bought from cloudflare, then you are done with this part.
+### 1. Domain Name
+In order to use a domain name to find your website instead of your IP, you need to buy one from a domain registrar.
+- If the domain name is bought from cloudflare, then you can skip to nslookup.
 - If not, you need to add cloudflare's nameserver to your domain regiestrar's nameserver. This is to tell your domain registrar to direct the incoming request to cloudflare so that cloudflare can filter out malicious connection and direct the request to your site. Usually, the registrar has a friendly GUI for you to set this up.
 - To check if your nameserver is set up successfully, type `nslookup yourDomainName`. You may see something similar to the following
   ```
@@ -36,17 +36,20 @@ In order to use domain name to find your website instead of your IP, you need to
 ### 2. Docker
 1. Go to [docker official page](https://docs.docker.com/engine/install/) to install docker, and go to [docker official page](https://docs.docker.com/compose/install/) to install docker compose.
 2. Follow the instructions on the site to make sure you have installed docker successfully.
-3. Git clone this repo, cd to this directory, and execute `docker compose up` to see if it works.
+3. Git clone this repo, cd to this directory, and execute `docker compose up`.
 ```
 git clone "https://github.com/Rob12312368/SelfHostWebsite.git"
 cd ./SelfHostWebsite 
 docker compose up
 ```
-4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other is mysql database for wordpress to interact with.
+4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other one is the mysql database for wordpress to interact with.
 
 ### 3. WordPress
 1. Access your website by typing *localhost:8080" on your browswer.
 2. After you log into your wordpress account, go to settings.
 3. Because we want to enforce https for the site, you need to change the *WordPress Address* and *Site Address* from whatever it was to **https://yourDomainName**  
 ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/7c70650f-e86f-496e-83ec-7ad12c7e8c18)
+
+### 4. Cloudflare
+1. 
 
