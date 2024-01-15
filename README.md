@@ -51,5 +51,20 @@ docker compose up
 ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/7c70650f-e86f-496e-83ec-7ad12c7e8c18)
 
 ### 4. Cloudflare
-1. 
+1. Sign up a cloudflare account at [cloudflare tunnel page](https://www.cloudflare.com/products/tunnel/), and go to [select account page](https://one.dash.cloudflare.com/?to=/:account/access/tunnels) to select an account for creating the tunnel.
+2. You will see a dashboard, and there is a small button called *add tunnel*
+   ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/fa7450a2-797b-44ea-80f0-13865ca0559a)
+3. Then, name your tunnel.
+   ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/0669239c-f22b-4697-8818-efe457de46d4)
+4. Copy the command and execute to start your container for the tunnel.
+   ![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/a670c3e6-7f6e-412b-8d5f-ab91a8778adb)
+5. At last (most important one), set your public host name and service.
+   - The public host name is to tell cloudflare what url to get access to your lan(local area network).
+     1. Therefore, you can leave **Subdomain** and **Path** blank in this tutorial.
+     2. For **Domain**, choose the one you set up earlier. For me, it is tsaoching.work.
+   - The service is to tell cloudflare where your service is in a lan, including the private ip and port number.
+     1. For **Type**, we choose HTTP because wordpress uses that protocol on default.
+     2. URL is your private ip and port number in this format "ip:port". In this tutorial, since we open wordpress service on 8080, it is "ip:8080".
+
+
 
