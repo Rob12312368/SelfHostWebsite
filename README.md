@@ -43,6 +43,10 @@ cd ./SelfHostWebsite
 docker compose up
 ```
 4. If it works, congrats! You now have two containers running. One is the wordpress container for you to build your website, and the other one is the mysql database for wordpress to interact with.
+5. If you are confused with the ports, how containers interact, etc. I created an illustration for your reference. Hope this helps you understand what we have done so far.
+![image](https://github.com/Rob12312368/SelfHostWebsite/assets/56261402/502aa2e8-5841-49e6-ab9d-62eabc184b4c)
+
+   
 
 ### 3. WordPress
 1. Access your website by typing **localhost:8080** on your browswer.
